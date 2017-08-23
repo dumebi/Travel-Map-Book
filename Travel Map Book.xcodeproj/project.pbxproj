@@ -13,6 +13,8 @@
 		D24E1C701F44E7260038852A /* Travel_Map_Book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D24E1C6E1F44E7260038852A /* Travel_Map_Book.xcdatamodeld */; };
 		D24E1C721F44E7260038852A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24E1C711F44E7260038852A /* Assets.xcassets */; };
 		D24E1C751F44E7260038852A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24E1C731F44E7260038852A /* LaunchScreen.storyboard */; };
+		D24E1C7E1F44EF9D0038852A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24E1C7D1F44EF9D0038852A /* CoreLocation.framework */; };
+		D24E1C801F45C5BF0038852A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E1C7F1F45C5BF0038852A /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D24E1C711F44E7260038852A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D24E1C741F44E7260038852A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D24E1C761F44E7260038852A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24E1C7D1F44EF9D0038852A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D24E1C7F1F45C5BF0038852A /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24E1C7E1F44EF9D0038852A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				D24E1C661F44E7250038852A /* Travel Map Book */,
 				D24E1C651F44E7250038852A /* Products */,
+				D24E1C7C1F44EF9D0038852A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +65,21 @@
 				D24E1C671F44E7260038852A /* AppDelegate.swift */,
 				D24E1C691F44E7260038852A /* ViewController.swift */,
 				D24E1C6B1F44E7260038852A /* Main.storyboard */,
+				D24E1C7F1F45C5BF0038852A /* FirstViewController.swift */,
 				D24E1C711F44E7260038852A /* Assets.xcassets */,
 				D24E1C731F44E7260038852A /* LaunchScreen.storyboard */,
 				D24E1C761F44E7260038852A /* Info.plist */,
 				D24E1C6E1F44E7260038852A /* Travel_Map_Book.xcdatamodeld */,
 			);
 			path = "Travel Map Book";
+			sourceTree = "<group>";
+		};
+		D24E1C7C1F44EF9D0038852A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D24E1C7D1F44EF9D0038852A /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +158,7 @@
 				D24E1C6A1F44E7260038852A /* ViewController.swift in Sources */,
 				D24E1C701F44E7260038852A /* Travel_Map_Book.xcdatamodeld in Sources */,
 				D24E1C681F44E7260038852A /* AppDelegate.swift in Sources */,
+				D24E1C801F45C5BF0038852A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,11 +283,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZNSBEU9P8A;
 				INFOPLIST_FILE = "Travel Map Book/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kornet.Travel-Map-Book";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kornet.Project-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -280,11 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = ZNSBEU9P8A;
 				INFOPLIST_FILE = "Travel Map Book/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kornet.Travel-Map-Book";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kornet.Project-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -308,6 +328,7 @@
 				D24E1C7B1F44E7260038852A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
