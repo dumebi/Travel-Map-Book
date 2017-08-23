@@ -24,6 +24,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var transmittedSubitle = ""
     var transmittedLatitude : Double = 0
     var transmittedLongtitude : Double = 0
+    
+    var requestCLLocation = CLLocation()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,6 +84,26 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         
         return pinView
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if transmittedLatitude != 0 {
+            if transmittedLongtitude != 0{
+                self.requestCLLocation = CLLocation(latitude: transmittedLatitude, longitude: transmittedLongtitude)
+            }
+        }
+        CLGeocoder().reverseGeocodeLocation(requestCLLocation) { (placemarks, error) in
+            if let placemark = placemarks{
+                if placemark.count > 0{
+                    let newPlacemark = MKPlacemark(placemark: placemark[0])
+                    let item = MKMapItem(placemark: newPlacemark)
+                    item.name = self.transmittedTitle
+                    
+                    let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                    item.openInMaps(launchOptions: launchOptions)
+                }
+            }
+        }
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
